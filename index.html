@@ -1,0 +1,382 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Rolland — Dev, front-end developer in Saint-Nazaire: clear, fast, and emotional web experiences."
+    />
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:description"
+      content="Rolland — Dev, front-end developer in Saint-Nazaire: clear, fast, and emotional web experiences."
+    />
+    <meta name="theme-color" content="#fafaf7" />
+    <link rel="icon" href="/favicon.svg" />
+    <title>Rolland — Dev</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Fond animé : constellation (canvas, derrière tout le contenu) -->
+    <canvas
+      id="constellation-bg"
+      class="constellation-bg"
+      aria-hidden="true"
+    ></canvas>
+
+    <!-- Écran de dévoilement / Loader -->
+    <div id="unveil-screen" class="unveil">
+      <div class="unveil__content">
+        <div class="unveil__brand">ROLLAND<span>-DEV</span></div>
+        <div class="unveil__progress">
+          <span id="unveil-counter">00</span><span>%</span>
+        </div>
+        <div class="unveil__bar">
+          <div id="unveil-fill" class="unveil__fill"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Superposition pour la séquence d'animation d'entrée du Hero (Isolé en position fixed) -->
+    <div
+      id="hero-intro-overlay"
+      class="hero-intro-overlay"
+      aria-hidden="true"
+    ></div>
+
+    <!-- En-tête du site -->
+    <header id="top">
+      <nav class="nav" aria-label="Navigation principale">
+        <a class="nav__brand" href="#top">Rolland<span>-Dev</span></a>
+        <ul class="nav__list" id="nav-list">
+          <li>
+            <a class="nav__link" href="#about" data-i18n="nav.about"
+              >À propos</a
+            >
+          </li>
+          <li>
+            <a class="nav__link" href="#projects" data-i18n="nav.projects"
+              >Projets</a
+            >
+          </li>
+          <li>
+            <a class="nav__link" href="#contact" data-i18n="nav.contact"
+              >Contact</a
+            >
+          </li>
+        </ul>
+        <div class="lang-selector">
+          <button
+            type="button"
+            class="lang-btn lang-btn--fr lang-btn--active"
+            data-lang="fr"
+          >
+            FR
+          </button>
+          <button type="button" class="lang-btn lang-btn--en" data-lang="en">
+            EN
+          </button>
+        </div>
+        <button
+          class="nav__toggle"
+          type="button"
+          aria-expanded="false"
+          aria-controls="nav-list"
+          aria-label="Menu"
+          data-i18n-aria="nav.menu"
+        >
+          <span class="nav__toggle-bar"></span>
+          <span class="nav__toggle-bar"></span>
+          <span class="nav__toggle-bar"></span>
+        </button>
+      </nav>
+    </header>
+
+    <!-- Contenu principal -->
+    <main>
+      <section id="hero" class="hero">
+        <h1 class="hero__name" id="hero-title">Rolland<span>-Dev</span></h1>
+        <p class="hero__role hero-fade-item" data-i18n="hero.role">
+          Développeur front-end
+        </p>
+        <p class="hero__tagline hero-fade-item" data-i18n="hero.tagline">
+          Des expériences web claires, rapides et moderne.
+        </p>
+        <div class="hero__cta hero-fade-item">
+          <a class="btn" href="#projects" data-i18n="hero.cta.projects"
+            >Voir les projets</a
+          >
+          <a class="btn btn--ghost" href="#contact" data-i18n="hero.cta.contact"
+            >Me contacter</a
+          >
+        </div>
+      </section>
+
+      <section id="about" class="section">
+        <h2 data-i18n="about.title">À propos</h2>
+        <p data-i18n="about.text">
+          Développeur front-end basé à Saint Nazaire, je conçois des interfaces
+          web sur mesure. Spécialisé dans la performance et le design éditorial,
+          j’accompagne startups et équipes produit du premier wireframe à la
+          mise en production.
+        </p>
+        <ul class="tech-list">
+          <li>HTML</li>
+          <li>CSS</li>
+          <li>JavaScript</li>
+          <li>React</li>
+          <li>Vue</li>
+          <li>TypeScript</li>
+        </ul>
+      </section>
+
+      <!-- Section Projects -->
+      <section id="projects" class="section">
+        <h2 data-i18n="projects.title">Projets</h2>
+        <div class="projects-wrapper">
+          <div class="card-grid" id="cardGrid">
+            <!-- Carte 1 -->
+            <div class="card" data-project="1">
+              <div
+                class="card__img"
+                style="background-color: var(--c-accent)"
+              ></div>
+              <div class="card__body">
+                <h3 class="card__title">Plateforme SaaS</h3>
+                <p class="card__desc">
+                  Application web de gestion analytique complète avec tableaux
+                  de bord en temps réel.
+                </p>
+              </div>
+              <a href="#" class="card__btn">Découvrir →</a>
+
+              <div
+                class="card-detail-data"
+                data-title="Plateforme SaaS Analytique"
+                data-description="Ce projet comprend une landing page, un tableau de bord analytique complet, un module d'exportation de données en PDF/CSV et un système de gestion des rôles d'utilisateurs."
+                data-techs="HTML5 / CSS3,JavaScript ES6,Chart.js,Node.js,PostgreSQL"
+                data-url="#"
+              ></div>
+            </div>
+
+            <!-- Carte 2 -->
+            <div class="card" data-project="2">
+              <div
+                class="card__img"
+                style="background-color: var(--c-accent-text)"
+              ></div>
+              <div class="card__body">
+                <h3 class="card__title">E-Commerce Headless</h3>
+                <p class="card__desc">
+                  Boutique en ligne moderne haute performance optimisée pour
+                  l'expérience utilisateur.
+                </p>
+              </div>
+              <a href="#" class="card__btn">Découvrir →</a>
+
+              <div
+                class="card-detail-data"
+                data-title="E-Commerce Headless"
+                data-description="Architecture moderne avec catalogue produits dynamique, panier réactif, recherche instantanée et intégration du paiement sécurisé Stripe."
+                data-techs="HTML5,CSS Grid,REST API,Stripe API,Webhooks"
+                data-url="#"
+              ></div>
+            </div>
+
+            <!-- Carte 3 -->
+            <div class="card" data-project="3">
+              <div
+                class="card__img"
+                style="background-color: var(--c-accent-soft)"
+              ></div>
+              <div class="card__body">
+                <h3 class="card__title">App Mobile Fitness</h3>
+                <p class="card__desc">
+                  Suivi d'entraînement personnalisé avec synchronisation des
+                  données de santé.
+                </p>
+              </div>
+              <a href="#" class="card__btn">Découvrir →</a>
+
+              <div
+                class="card-detail-data"
+                data-title="Application Mobile Fitness"
+                data-description="Application PWA permettant de suivre ses séances de sport hors-ligne, calculer ses calories et visualiser sa progression hebdomadaire sous forme de graphiques."
+                data-techs="Vanilla JS,PWA / Service Workers,IndexedDB,CSS Animations"
+                data-url="#"
+              ></div>
+            </div>
+
+            <!-- Carte 4 -->
+            <div class="card" data-project="4">
+              <div
+                class="card__img"
+                style="background-color: var(--c-ink)"
+              ></div>
+              <div class="card__body">
+                <h3 class="card__title">Outil de Productivité</h3>
+                <p class="card__desc">
+                  Gestionnaire de tâches collaboratif avec automatisation du
+                  flux de travail.
+                </p>
+              </div>
+              <a href="#" class="card__btn">Découvrir →</a>
+
+              <div
+                class="card-detail-data"
+                data-title="Outil de Productivité"
+                data-description="Tableau de type Kanban interactif, gestion de jalons de projets, système de notifications et timers Pomodoro intégrés."
+                data-techs="HTML5 Canvas,JavaScript,Drag & Drop API,LocalStorage"
+                data-url="#"
+              ></div>
+            </div>
+
+            <!-- Carte 5 -->
+            <div class="card" data-project="5">
+              <div
+                class="card__img"
+                style="background-color: var(--c-bg)"
+              ></div>
+              <div class="card__body">
+                <h3 class="card__title">Design System</h3>
+                <p class="card__desc">
+                  Bibliothèque de composants UI/UX unifiée pour applications
+                  d'entreprise.
+                </p>
+              </div>
+              <a href="#" class="card__btn">Découvrir →</a>
+
+              <div
+                class="card-detail-data"
+                data-title="Design System d'Entreprise"
+                data-description="Ensemble complet de composants UI réutilisables, variables CSS thématiques (Dark/Light mode), documentation interactive et règles d'accessibilité WCAG AA."
+                data-techs="CSS Variables,Vanilla JS,Web Components,A11y"
+                data-url="#"
+              ></div>
+            </div>
+
+            <!-- Carte 6 -->
+            <div class="card" data-project="6">
+              <div
+                class="card__img"
+                style="background-color: var(--c-accent)"
+              ></div>
+              <div class="card__body">
+                <h3 class="card__title">Moteur de Recherche AI</h3>
+                <p class="card__desc">
+                  Interface de recherche sémantique propulsée par le traitement
+                  du langage naturel.
+                </p>
+              </div>
+              <a href="#" class="card__btn">Découvrir →</a>
+
+              <div
+                class="card-detail-data"
+                data-title="Moteur de Recherche AI"
+                data-description="Interface de recherche intelligente offrant un filtrage instantané par mots-clés, autocomplétion vectorielle et affichage dynamique des résultats."
+                data-techs="HTML5,CSS Flexbox,Fetch API,Vector Search"
+                data-url="#"
+              ></div>
+            </div>
+          </div>
+
+          <!-- Overlay Modal FLIP -->
+          <div class="modal-overlay" id="modalOverlay">
+            <div class="modal-backdrop"></div>
+            <div class="expanded-card" id="expandedCard">
+              <div class="expanded-content">
+                <div class="expanded-header" id="modalImage">
+                  <button class="btn-back" id="btnBack">
+                    <svg
+                      width="16"
+                      height="16"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                    >
+                      <line x1="19" y1="12" x2="5" y2="12" />
+                      <polyline points="12 19 5 12 12 5" />
+                    </svg>
+                    Retour
+                  </button>
+                </div>
+                <div class="expanded-body">
+                  <div class="expanded-title-wrapper">
+                    <h2 class="expanded-title" id="modalTitle">
+                      Titre du Projet
+                    </h2>
+                    <a href="#" target="_blank" class="btn-visit" id="btnVisit">
+                      Visiter le site
+                      <svg
+                        width="14"
+                        height="14"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                      >
+                        <path
+                          d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"
+                        />
+                        <polyline points="15 3 21 3 21 9" />
+                        <line x1="10" y1="14" x2="21" y2="3" />
+                      </svg>
+                    </a>
+                  </div>
+
+                  <div class="section-block">
+                    <span class="section-label"
+                      >Plan du site & Fonctionnalités</span
+                    >
+                    <p class="section-text" id="modalDescription"></p>
+                  </div>
+
+                  <div class="section-block">
+                    <span class="section-label">Technologies Utilisées</span>
+                    <div class="tech-list" id="modalTechs"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="section">
+        <h2 data-i18n="contact.title">Contact</h2>
+        <ul class="contact-list">
+          <li>
+            <a href="https://github.com/roland-dev" class="contact-link">
+              <span>GitHub</span>
+              <span class="contact-link__arrow" aria-hidden="true">→</span>
+            </a>
+          </li>
+          <li>
+            <a href="mailto:bonjour@roland.dev" class="contact-link">
+              <span>E-mail</span>
+              <span class="contact-link__arrow" aria-hidden="true">→</span>
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://www.linkedin.com/in/roland-dev"
+              class="contact-link"
+            >
+              <span>LinkedIn</span>
+              <span class="contact-link__arrow" aria-hidden="true">→</span>
+            </a>
+          </li>
+        </ul>
+      </section>
+    </main>
+
+    <footer>
+      <p>Rolland — Dev</p>
+      <p id="footer-year" class="footer__year"></p>
+    </footer>
+
+    <script type="module" src="main.js"></script>
+  </body>
+</html>
