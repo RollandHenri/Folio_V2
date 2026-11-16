@@ -1,3 +1,7 @@
+/* =========================================================================
+   Portfolio Design System & Styles
+   ========================================================================= */
+
 :root {
   --c-bg: #fafaf7;
   --c-ink: #111310;
@@ -41,9 +45,6 @@
 html {
   scroll-behavior: smooth;
   overflow-x: hidden;
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
 }
 
 body {
@@ -54,13 +55,10 @@ body {
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
   overflow-x: hidden;
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
 }
 
 /* ─────────────────────────────────────────────────────────────
-   Fond animé : Constellation (canvas derrière tout le contenu)
+   Fond animé : Constellation
 ───────────────────────────────────────────────────────────── */
 .constellation-bg {
   position: fixed;
@@ -78,7 +76,6 @@ body {
   }
 }
 
-/* Verrouillage du scroll X et Y pendant l'animation de chargement + intro hero */
 html.is-animating,
 body.is-animating {
   overflow: hidden !important;
@@ -148,7 +145,6 @@ body.is-animating {
   transition: width 0.1s linear;
 }
 
-/* Transitions de fermeture de l'écran initial du loader */
 .unveil.is-leaving .unveil__content {
   opacity: 0;
   transform: translateY(-20px);
@@ -160,73 +156,146 @@ body.is-animating {
   transform: scale(1.08);
 }
 
+.unveil.is-fading {
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
 /* ─────────────────────────────────────────────────────────────
-   Overlay pour l'Animation Introductive du Hero (Plein écran Fixe)
+   Grille Bento : intro après le loader
 ───────────────────────────────────────────────────────────── */
-.hero-intro-overlay {
+.bento-intro {
   position: fixed;
   inset: 0;
   width: 100vw;
   height: 100dvh;
-  background-color: var(--c-bg);
-  z-index: 10000;
+  background: #000;
+  z-index: 50;
   display: flex;
   align-items: center;
   justify-content: center;
   overflow: hidden;
   opacity: 0;
   pointer-events: none;
-  transition: opacity 0.4s ease;
+  visibility: hidden;
+  transition: opacity 0.5s ease;
 }
 
-.hero-intro-overlay.is-active {
+.bento-intro.is-visible {
   opacity: 1;
   pointer-events: auto;
+  visibility: visible;
 }
 
-.hero-intro-overlay__img {
+.bento-grid {
   position: absolute;
-  width: 220px;
-  height: 140px;
-  background-color: #e7e5de;
-  background-image: radial-gradient(
-    circle at 25% 25%,
-    rgba(255, 77, 0, 0.25) 0%,
-    transparent 50%
-  );
-  border: 1px solid rgba(17, 19, 16, 0.15);
-  border-radius: var(--space-2);
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%) scale(0.2);
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: 1.2fr 1.6fr 1.2fr;
+  grid-template-rows: 1fr 1.4fr 1fr;
+  gap: 6px;
+  background: #000;
+  padding: 6px;
+  will-change: transform;
+}
+
+.bento-item {
+  position: relative;
+  overflow: hidden;
+  background: #1a1a1a;
+  border-radius: 4px;
+}
+
+.bento-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.85);
+  display: block;
+}
+
+.item-1 {
+  grid-column: 1;
+  grid-row: 1;
+}
+.item-2 {
+  grid-column: 1;
+  grid-row: 2 / span 2;
+}
+.item-3 {
+  grid-column: 2;
+  grid-row: 1;
+}
+.item-4 {
+  grid-column: 2;
+  grid-row: 3;
+}
+.item-5 {
+  grid-column: 3;
+  grid-row: 1 / span 2;
+}
+.item-6 {
+  grid-column: 3;
+  grid-row: 3;
+}
+
+.central-frame {
+  grid-column: 2;
+  grid-row: 2;
+  width: 100%;
+  height: 100%;
+  background: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.scroll-indicator {
+  position: relative;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  text-transform: uppercase;
+  font-size: 1.2rem;
+  letter-spacing: 0.2em;
+  color: #111111;
+  font-weight: 600;
+  will-change: opacity;
+  transition: opacity 0.2s ease;
+}
+
+.scroll-indicator span {
+  width: 3px;
+  height: 30px;
+  background: #ff4d00;
+  animation: pulse-line 1.5s infinite ease-in-out;
+}
+
+@keyframes pulse-line {
+  0%,
+  100% {
+    transform: scaleY(0.4);
+    opacity: 0.4;
+  }
+  50% {
+    transform: scaleY(1);
+    opacity: 1;
+  }
+}
+
+body.is-bento-intro main,
+body.is-bento-intro header#top {
   opacity: 0;
-  will-change: transform, opacity;
+  transform: translateY(0) scale(1);
+  pointer-events: none;
 }
 
-.hero-intro-overlay__title {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%) scale(0.2);
-  transform-origin: 50% 50%;
-  font-size: clamp(2.5rem, 8vw, var(--fs-display));
-  font-weight: 800;
-  color: var(--c-ink);
-  text-align: center;
-  opacity: 0;
-  will-change: transform, opacity;
-  white-space: nowrap;
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
-}
-
-.hero-intro-overlay__title span {
-  color: var(--c-accent-text);
-}
-
-/* ─────────────────────────────────────────────────────────────
-   Transitions du Contenu Principal & Hero
-───────────────────────────────────────────────────────────── */
 main,
 header#top {
   transition:
@@ -237,53 +306,23 @@ header#top {
 body:not(.is-loaded) main,
 body:not(.is-loaded) header#top {
   opacity: 0;
-  transform: translateY(30px) scale(0.98);
+  transform: translateY(20px);
+  pointer-events: none;
 }
 
 body.is-loaded main,
 body.is-loaded header#top {
   opacity: 1;
-  transform: translateY(0) scale(1);
+  transform: translateY(0);
+  transition:
+    opacity 1.5s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 1.5s cubic-bezier(0.16, 1, 0.3, 1);
+  pointer-events: auto;
 }
 
 .hero-fade-item {
-  opacity: 0;
-  transform: translateY(20px);
-  transition:
-    opacity 0.8s ease,
-    transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
-}
-
-.hero-fade-item.is-visible {
   opacity: 1;
   transform: translateY(0);
-}
-
-.hero__name.is-hidden-initial {
-  opacity: 0;
-}
-
-.hero__name.animate-drop-dezoom {
-  animation: heroTitleDezoomDrop 1.4s cubic-bezier(0.175, 0.885, 0.32, 1.2)
-    forwards;
-}
-
-@keyframes heroTitleDezoomDrop {
-  0% {
-    opacity: 0;
-    transform: scale(3);
-  }
-  40% {
-    opacity: 1;
-    transform: scale(1.1);
-  }
-  70% {
-    transform: scale(0.98);
-  }
-  100% {
-    opacity: 1;
-    transform: scale(1);
-  }
 }
 
 /* ─────────────────────────────────────────────────────────────
@@ -428,7 +467,7 @@ main h1 span {
 
 .section {
   padding: var(--space-16) var(--space-4);
-  max-width: 1100px;
+  max-width: 1430px;
   margin: 0 auto;
 }
 
@@ -485,112 +524,137 @@ main h1 span {
   text-decoration: none;
   border-radius: var(--space-1);
   transition:
-    transform 0.2s ease,
+    transform 0.5s cubic-bezier(0.34, 1.56, 0.64, 1),
+    border-radius 0.5s cubic-bezier(0.34, 1.56, 0.64, 1),
+    box-shadow 0.5s ease,
+    background 0.2s ease,
     opacity 0.2s ease;
+  will-change: transform, border-radius;
 }
 .btn:hover {
-  transform: translateY(-2px);
+  transform: translate(5px, 5px);
+  border-radius: 15px;
+  box-shadow: 0 14px 28px -6px rgba(255, 77, 0, 0.25);
   opacity: 0.92;
 }
 .btn--ghost {
   background: transparent;
   border: 1px solid var(--c-ink);
 }
+.btn--ghost:hover {
+  transform: translate(5px, 5px);
+  border-radius: 15px;
+  box-shadow: 0 14px 28px -6px rgba(17, 19, 16, 0.2);
+  background: var(--c-ink);
+  color: var(--c-surface);
+}
 
 /* ─────────────────────────────────────────────────────────────
    Projets & Grille FLIP
 ───────────────────────────────────────────────────────────── */
-.card-grid {
+.card-grid.bento-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
-  padding: 0 30px;
+  grid-template-columns: 1.2fr 1.6fr 1.2fr;
+  grid-template-rows: 1fr 1.4fr 1fr;
+  gap: 8px;
+  padding: 0;
   position: relative;
+  height: 75vh;
+  background: none;
   transition: filter 1s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-.card-grid.no-hover .card {
+.card-grid.bento-grid.no-hover .card {
   pointer-events: none !important;
   transform: none !important;
 }
 
-.card-grid.blurred {
+.card-grid.bento-grid.blurred {
   filter: blur(8px);
 }
 
+.item-1 { grid-column: 1; grid-row: 1; }
+.item-2 { grid-column: 2; grid-row: 1 / span 2; }
+.item-3 { grid-column: 3; grid-row: 1; }
+.item-4 { grid-column: 1; grid-row: 2 / span 2; }
+.item-5 { grid-column: 3; grid-row: 2 / span 2; }
+.item-6 { grid-column: 2; grid-row: 3; }
+
 .card {
-  background-color: var(--c-surface);
-  border: 1px solid var(--c-accent-soft);
-  border-radius: 12px;
+  position: relative;
+  background-color: #000;
+  border-radius: 16px;
   cursor: pointer;
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-  gap: 12px;
-  opacity: 1;
+  overflow: hidden;
   transition:
-    transform 0.3s ease,
-    border-color 0.3s ease,
-    box-shadow 0.3s ease,
+    transform 0.35s ease,
     opacity 0.3s ease;
   user-select: none;
+  height: 100%;
 }
 
 .card:hover {
-  transform: translateY(-4px);
-  border-color: var(--c-accent);
-  box-shadow: 0 8px 24px rgba(255, 77, 0, 0.08);
+  transform: translateY(-5px);
 }
 
-.card__img {
-  width: 100%;
-  height: 200px;
+.card__bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background-image: var(--img);
   background-size: cover;
   background-position: center;
-  border-radius: 12px 12px 0 0;
-  overflow: hidden;
+  transition: transform 0.5s ease, filter 0.4s ease;
+  filter: grayscale(0.35);
 }
 
-.card__body {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  gap: var(--space-3);
-  padding: var(--space-4);
+.card:hover .card__bg {
+  filter: grayscale(0);
+  transform: scale(1.05);
+}
+
+.card__overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.85),
+    transparent 35%,
+    transparent 65%,
+    rgba(0, 0, 0, 0.6)
+  );
 }
 
 .card__title {
+  position: absolute;
+  top: 1.25rem;
+  left: 1.25rem;
+  z-index: 2;
+  color: #fff;
   font-size: var(--fs-lg);
   font-weight: 700;
-  color: var(--c-ink);
+  letter-spacing: -0.02em;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
+  max-width: 75%;
   margin: 0;
 }
 
 .card__desc {
+  position: absolute;
+  bottom: 1.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+  color: #fff;
   font-size: var(--fs-sm);
-  color: var(--c-ink);
-  opacity: 0.6;
+  text-align: center;
+  padding: 0 1.25rem;
+  max-width: 80%;
   line-height: 1.5;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.6);
+  opacity: 0.9;
   margin: 0;
-}
-
-.card__btn {
-  margin-top: auto;
-  display: inline-flex;
-  align-items: center;
-  gap: var(--space-1);
-  padding: var(--space-2) var(--space-4);
-  background: var(--c-accent);
-  color: #ffffff;
-  text-decoration: none;
-  border-radius: 8px;
-  font-size: var(--fs-sm);
-  font-weight: 600;
-  transition: background 0.2s ease;
-}
-
-.card__btn:hover {
-  background: var(--c-accent-text);
 }
 
 .card.ghost {
@@ -627,7 +691,9 @@ main h1 span {
   z-index: 1;
   opacity: 0;
   visibility: hidden;
-  transition: opacity 0.3s ease, visibility 0.3s ease;
+  transition:
+    opacity 0.3s ease,
+    visibility 0.3s ease;
 }
 
 .modal-overlay.active .modal-backdrop {
@@ -689,8 +755,8 @@ main h1 span {
   height: 180px;
   flex-shrink: 0;
   background-size: cover;
-  background-position: center;
-  background-color: var(--c-bg);
+  background-position: top center;
+  background-color: var(--c-accent-soft);
 }
 
 .btn-back {
@@ -805,8 +871,23 @@ main h1 span {
 }
 
 @media (max-width: 768px) {
-  .card-grid {
+  .card-grid.bento-grid {
     grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    height: auto;
+    gap: 16px;
+  }
+  .item-1,
+  .item-2,
+  .item-3,
+  .item-4,
+  .item-5,
+  .item-6 {
+    grid-column: 1;
+    grid-row: auto;
+  }
+  .card {
+    height: 300px;
   }
   .expanded-card {
     overflow-y: auto;

@@ -1,0 +1,99 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" width="1600" height="1000" role="img" aria-label="Aperçu d'un moteur de recherche sémantique">
+  <rect width="1600" height="1000" fill="#FAFAF7"/>
+
+  <!-- Header -->
+  <rect x="0" y="0" width="1600" height="88" fill="#FFFFFF"/>
+  <line x1="0" y1="88" x2="1600" y2="88" stroke="#E8E6DF"/>
+  <rect x="56" y="28" width="32" height="32" rx="8" fill="#111310"/>
+  <circle cx="72" cy="44" r="7" fill="#FF4D00"/>
+  <text x="100" y="52" font-family="Inter, Segoe UI, system-ui, sans-serif" font-size="18" font-weight="800" letter-spacing="3" fill="#111310">ORACLE</text>
+
+  <text x="1260" y="53" font-family="Inter, Segoe UI, system-ui, sans-serif" font-size="12" fill="#8A8F84">Recherche augmentée par IA</text>
+  <rect x="1452" y="26" width="56" height="36" rx="18" fill="#F4F3EE"/>
+  <text x="1480" y="49" font-family="Inter, Segoe UI, system-ui, sans-serif" font-size="12" fill="#6B6F66" text-anchor="middle">⌘K</text>
+  <circle cx="1532" cy="44" r="18" fill="#FFA95D"/>
+  <text x="1532" y="49" font-family="Inter, Segoe UI, system-ui, sans-serif" font-size="12" font-weight="700" fill="#111310" text-anchor="middle">R</text>
+
+  <!-- Recherche -->
+  <text x="56" y="152" font-family="Inter, Segoe UI, system-ui, sans-serif" font-size="28" font-weight="700" fill="#111310">Recherche sémantique</text>
+  <text x="56" y="178" font-family="Inter, Segoe UI, system-ui, sans-serif" font-size="13" fill="#6B6F66">Trouvez la bonne réponse, pas seulement des liens.</text>
+
+  <rect x="56" y="200" width="980" height="64" rx="32" fill="#FFFFFF" stroke="#FF4D00" stroke-width="2"/>
+  <circle cx="96" cy="230" r="9" fill="none" stroke="#6B6F66" stroke-width="2"/>
+  <line x1="103" y1="237" x2="109" y2="243" stroke="#6B6F66" stroke-width="2" stroke-linecap="round"/>
+  <text x="126" y="236" font-family="Inter, Segoe UI, system-ui, sans-serif" font-size="15" fill="#111310">réduire le temps de chargement d'une page</text>
+  <rect x="884" y="208" width="136" height="48" rx="24" fill="#FF4D00"/>
+  <text x="952" y="237" font-family="Inter, Segoe UI, system-ui, sans-serif" font-size="13" font-weight="600" fill="#111310" text-anchor="middle">Rechercher</text>
+
+  <rect x="56" y="288" width="140" height="30" rx="15" fill="#F4F3EE" stroke="#E8E6DF"/>
+  <text x="126" y="308" font-family="Inter, Segoe UI, system-ui, sans-serif" font-size="11" fill="#6B6F66" text-anchor="middle">Performance web</text>
+  <rect x="208" y="288" width="156" height="30" rx="15" fill="#F4F3EE" stroke="#E8E6DF"/>
+  <text x="286" y="308" font-family="Inter, Segoe UI, system-ui, sans-serif" font-size="11" fill="#6B6F66" text-anchor="middle">Core Web Vitals</text>
+  <rect x="376" y="288" width="122" height="30" rx="15" fill="#F4F3EE" stroke="#E8E6DF"/>
+  <text x="437" y="308" font-family="Inter, Segoe UI, system-ui, sans-serif" font-size="11" fill="#6B6F66" text-anchor="middle">Lazy loading</text>
+  <rect x="510" y="288" width="118" height="30" rx="15" fill="#F4F3EE" stroke="#E8E6DF"/>
+  <text x="569" y="308" font-family="Inter, Segoe UI, system-ui, sans-serif" font-size="11" fill="#6B6F66" text-anchor="middle">Cache HTTP</text>
+
+  <!-- Résultats -->
+  <text x="56" y="360" font-family="Inter, Segoe UI, system-ui, sans-serif" font-size="12" fill="#8A8F84">12 résultats · 0,42 s</text>
+
+  <rect x="56" y="380" width="980" height="150" rx="14" fill="#FFFFFF" stroke="#E8E6DF"/>
+  <rect x="76" y="400" width="28" height="28" rx="8" fill="#FFF0E8"/>
+  <circle cx="90" cy="414" r="5" fill="#FF4D00"/>
+  <text x="116" y="420" font-family="Inter, Segoe UI, system-ui, sans-serif" font-size="11" font-weight="600" fill="#C43500">developer.mozilla.org</text>
+  <rect x="940" y="400" width="72" height="26" rx="13" fill="#FFF0E8"/>
+  <text x="976" y="417" font-family="Inter, Segoe UI, system-ui, sans-serif" font-size="11" font-weight="600" fill="#C43500" text-anchor="middle">98 %</text>
+  <text x="76" y="462" font-family="Inter, Segoe UI, system-ui, sans-serif" font-size="16" font-weight="700" fill="#111310">Réduire le temps de chargement avec le lazy loading</text>
+  <text x="76" y="488" font-family="Inter, Segoe UI, system-ui, sans-serif" font-size="12.5" fill="#6B6F66">Le chargement différé des images et des iframes évite de bloquer le rendu initial de la page.</text>
+  <text x="76" y="508" font-family="Inter, Segoe UI, system-ui, sans-serif" font-size="12.5" fill="#6B6F66">Chaque ressource n'est téléchargée que lorsqu'elle approche de la zone visible.</text>
+
+  <rect x="56" y="546" width="980" height="150" rx="14" fill="#FFFFFF" stroke="#E8E6DF"/>
+  <rect x="76" y="566" width="28" height="28" rx="8" fill="#FFF0E8"/>
+  <circle cx="90" cy="580" r="5" fill="#FF4D00"/>
+  <text x="116" y="586" font-family="Inter, Segoe UI, system-ui, sans-serif" font-size="11" font-weight="600" fill="#C43500">web.dev</text>
+  <rect x="940" y="566" width="72" height="26" rx="13" fill="#FFF0E8"/>
+  <text x="976" y="583" font-family="Inter, Segoe UI, system-ui, sans-serif" font-size="11" font-weight="600" fill="#C43500" text-anchor="middle">94 %</text>
+  <text x="76" y="628" font-family="Inter, Segoe UI, system-ui, sans-serif" font-size="16" font-weight="700" fill="#111310">Optimiser le cache HTTP et la compression</text>
+  <text x="76" y="654" font-family="Inter, Segoe UI, system-ui, sans-serif" font-size="12.5" fill="#6B6F66">Les en-têtes de cache et la compression Brotli réduisent le poids transféré au premier chargement.</text>
+  <text x="76" y="674" font-family="Inter, Segoe UI, system-ui, sans-serif" font-size="12.5" fill="#6B6F66">Un cache bien réglé évite de retélécharger les assets inchangés entre deux visites.</text>
+
+  <rect x="56" y="712" width="980" height="150" rx="14" fill="#FFFFFF" stroke="#E8E6DF"/>
+  <rect x="76" y="732" width="28" height="28" rx="8" fill="#FFF0E8"/>
+  <circle cx="90" cy="746" r="5" fill="#FF4D00"/>
+  <text x="116" y="752" font-family="Inter, Segoe UI, system-ui, sans-serif" font-size="11" font-weight="600" fill="#C43500">developers.google.com</text>
+  <rect x="940" y="732" width="72" height="26" rx="13" fill="#FFF0E8"/>
+  <text x="976" y="749" font-family="Inter, Segoe UI, system-ui, sans-serif" font-size="11" font-weight="600" fill="#C43500" text-anchor="middle">87 %</text>
+  <text x="76" y="794" font-family="Inter, Segoe UI, system-ui, sans-serif" font-size="16" font-weight="700" fill="#111310">Core Web Vitals : mesurer l'expérience réelle</text>
+  <text x="76" y="820" font-family="Inter, Segoe UI, system-ui, sans-serif" font-size="12.5" fill="#6B6F66">LCP, INP et CLS mesurent la vitesse perçue, la réactivité et la stabilité visuelle du site.</text>
+  <text x="76" y="840" font-family="Inter, Segoe UI, system-ui, sans-serif" font-size="12.5" fill="#6B6F66">Ces trois indicateurs guident les priorités d'optimisation d'une page.</text>
+
+  <!-- Réponse générée -->
+  <rect x="1060" y="380" width="484" height="300" rx="16" fill="#111310"/>
+  <text x="1086" y="416" font-family="Inter, Segoe UI, system-ui, sans-serif" font-size="10" font-weight="600" letter-spacing="2" fill="#FF4D00">RÉPONSE GÉNÉRÉE</text>
+  <g font-family="Inter, Segoe UI, system-ui, sans-serif" font-size="14" fill="#FAFAF7">
+    <text x="1086" y="458">Chargez les images en différé, compressez</text>
+    <text x="1086" y="482">les assets et activez le cache HTTP.</text>
+    <text x="1086" y="506">Ces trois leviers suffisent à diviser</text>
+    <text x="1086" y="530">le temps de chargement par deux.</text>
+  </g>
+  <line x1="1086" y1="570" x2="1518" y2="570" stroke="#2A2D29"/>
+  <text x="1086" y="606" font-family="Inter, Segoe UI, system-ui, sans-serif" font-size="11" fill="#B9BDB2">3 sources citées</text>
+  <rect x="1420" y="586" width="98" height="30" rx="15" fill="#241712"/>
+  <text x="1469" y="606" font-family="Inter, Segoe UI, system-ui, sans-serif" font-size="11" font-weight="600" fill="#FF8A4D" text-anchor="middle">Copier</text>
+
+  <!-- Sources -->
+  <rect x="1060" y="700" width="484" height="162" rx="16" fill="#FFFFFF" stroke="#E8E6DF"/>
+  <text x="1086" y="734" font-family="Inter, Segoe UI, system-ui, sans-serif" font-size="13" font-weight="600" fill="#111310">Sources</text>
+
+  <circle cx="1090" cy="762" r="4" fill="#FF4D00"/>
+  <text x="1106" y="766" font-family="Inter, Segoe UI, system-ui, sans-serif" font-size="12" fill="#6B6F66">MDN — Lazy loading</text>
+  <text x="1518" y="766" font-family="Inter, Segoe UI, system-ui, sans-serif" font-size="12" fill="#C43500" text-anchor="end">↗</text>
+
+  <circle cx="1090" cy="796" r="4" fill="#FF4D00"/>
+  <text x="1106" y="800" font-family="Inter, Segoe UI, system-ui, sans-serif" font-size="12" fill="#6B6F66">web.dev — HTTP caching</text>
+  <text x="1518" y="800" font-family="Inter, Segoe UI, system-ui, sans-serif" font-size="12" fill="#C43500" text-anchor="end">↗</text>
+
+  <circle cx="1090" cy="830" r="4" fill="#FF4D00"/>
+  <text x="1106" y="834" font-family="Inter, Segoe UI, system-ui, sans-serif" font-size="12" fill="#6B6F66">Google — Core Web Vitals</text>
+  <text x="1518" y="834" font-family="Inter, Segoe UI, system-ui, sans-serif" font-size="12" fill="#C43500" text-anchor="end">↗</text>
+</svg>

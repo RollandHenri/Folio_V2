@@ -1,0 +1,117 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" width="1600" height="1000" role="img" aria-label="Aperçu d'une bibliothèque de composants design system">
+  <rect width="1600" height="1000" fill="#FAFAF7"/>
+
+  <!-- Sidebar -->
+  <rect x="0" y="0" width="300" height="1000" fill="#FFFFFF"/>
+  <line x1="300" y1="0" x2="300" y2="1000" stroke="#E8E6DF"/>
+
+  <rect x="24" y="40" width="36" height="36" rx="8" fill="#FF4D00"/>
+  <text x="42" y="65" font-family="Inter, Segoe UI, system-ui, sans-serif" font-size="18" font-weight="800" fill="#FFFFFF" text-anchor="middle">A</text>
+  <text x="74" y="65" font-family="Inter, Segoe UI, system-ui, sans-serif" font-size="16" font-weight="800" letter-spacing="2" fill="#111310">ATELIER</text>
+
+  <text x="32" y="126" font-family="Inter, Segoe UI, system-ui, sans-serif" font-size="9" font-weight="600" letter-spacing="2" fill="#8A8F84">FONDATIONS</text>
+
+  <rect x="20" y="144" width="260" height="40" rx="10" fill="#FFF0E8"/>
+  <text x="40" y="169" font-family="Inter, Segoe UI, system-ui, sans-serif" font-size="13" font-weight="600" fill="#C43500">Couleurs</text>
+  <text x="40" y="219" font-family="Inter, Segoe UI, system-ui, sans-serif" font-size="13" fill="#6B6F66">Typographie</text>
+  <text x="40" y="269" font-family="Inter, Segoe UI, system-ui, sans-serif" font-size="13" fill="#6B6F66">Espacements</text>
+  <text x="40" y="319" font-family="Inter, Segoe UI, system-ui, sans-serif" font-size="13" fill="#6B6F66">Composants</text>
+  <text x="40" y="369" font-family="Inter, Segoe UI, system-ui, sans-serif" font-size="13" fill="#6B6F66">Iconographie</text>
+
+  <rect x="24" y="900" width="84" height="28" rx="14" fill="#F4F3EE"/>
+  <text x="66" y="918" font-family="Inter, Segoe UI, system-ui, sans-serif" font-size="11" font-weight="600" fill="#6B6F66" text-anchor="middle">v2.4</text>
+
+  <!-- Header -->
+  <text x="348" y="62" font-family="Inter, Segoe UI, system-ui, sans-serif" font-size="11" fill="#8A8F84">Design System / Fondations</text>
+  <text x="348" y="96" font-family="Inter, Segoe UI, system-ui, sans-serif" font-size="28" font-weight="700" fill="#111310">Fondations</text>
+
+  <rect x="1408" y="54" width="140" height="36" rx="18" fill="#F4F3EE"/>
+  <rect x="1412" y="58" width="64" height="28" rx="14" fill="#FFFFFF"/>
+  <text x="1444" y="76" font-family="Inter, Segoe UI, system-ui, sans-serif" font-size="11" font-weight="600" fill="#111310" text-anchor="middle">Clair</text>
+  <text x="1506" y="76" font-family="Inter, Segoe UI, system-ui, sans-serif" font-size="11" fill="#8A8F84" text-anchor="middle">Sombre</text>
+
+  <!-- Couleurs -->
+  <text x="348" y="150" font-family="Inter, Segoe UI, system-ui, sans-serif" font-size="16" font-weight="700" fill="#111310">Couleurs</text>
+  <text x="1548" y="150" font-family="Inter, Segoe UI, system-ui, sans-serif" font-size="11" fill="#8A8F84" text-anchor="end">6 tokens</text>
+
+  <rect x="348" y="176" width="185" height="110" rx="10" fill="#111310"/>
+  <text x="348" y="310" font-family="Inter, Segoe UI, system-ui, sans-serif" font-size="12" font-weight="600" fill="#111310">Encre</text>
+  <text x="348" y="328" font-family="ui-monospace, monospace" font-size="10" fill="#8A8F84">#111310</text>
+
+  <rect x="551" y="176" width="185" height="110" rx="10" fill="#FF4D00"/>
+  <text x="551" y="310" font-family="Inter, Segoe UI, system-ui, sans-serif" font-size="12" font-weight="600" fill="#111310">Orange</text>
+  <text x="551" y="328" font-family="ui-monospace, monospace" font-size="10" fill="#8A8F84">#FF4D00</text>
+
+  <rect x="754" y="176" width="185" height="110" rx="10" fill="#FFA95D"/>
+  <text x="754" y="310" font-family="Inter, Segoe UI, system-ui, sans-serif" font-size="12" font-weight="600" fill="#111310">Soft</text>
+  <text x="754" y="328" font-family="ui-monospace, monospace" font-size="10" fill="#8A8F84">#FFA95D</text>
+
+  <rect x="957" y="176" width="185" height="110" rx="10" fill="#FAFAF7" stroke="#E8E6DF"/>
+  <text x="957" y="310" font-family="Inter, Segoe UI, system-ui, sans-serif" font-size="12" font-weight="600" fill="#111310">Sable</text>
+  <text x="957" y="328" font-family="ui-monospace, monospace" font-size="10" fill="#8A8F84">#FAFAF7</text>
+
+  <rect x="1160" y="176" width="185" height="110" rx="10" fill="#6B6F66"/>
+  <text x="1160" y="310" font-family="Inter, Segoe UI, system-ui, sans-serif" font-size="12" font-weight="600" fill="#111310">Muted</text>
+  <text x="1160" y="328" font-family="ui-monospace, monospace" font-size="10" fill="#8A8F84">#6B6F66</text>
+
+  <rect x="1363" y="176" width="185" height="110" rx="10" fill="#FFFFFF" stroke="#E8E6DF"/>
+  <text x="1363" y="310" font-family="Inter, Segoe UI, system-ui, sans-serif" font-size="12" font-weight="600" fill="#111310">Surface</text>
+  <text x="1363" y="328" font-family="ui-monospace, monospace" font-size="10" fill="#8A8F84">#FFFFFF</text>
+
+  <!-- Typographie -->
+  <text x="348" y="390" font-family="Inter, Segoe UI, system-ui, sans-serif" font-size="16" font-weight="700" fill="#111310">Typographie</text>
+
+  <rect x="348" y="420" width="260" height="270" rx="14" fill="#FFFFFF" stroke="#E8E6DF"/>
+  <text x="478" y="456" font-family="Inter, Segoe UI, system-ui, sans-serif" font-size="11" fill="#8A8F84" text-anchor="middle">Inter</text>
+  <text x="478" y="578" font-family="Inter, Segoe UI, system-ui, sans-serif" font-size="120" font-weight="700" fill="#111310" text-anchor="middle">Aa</text>
+  <text x="478" y="650" font-family="Inter, Segoe UI, system-ui, sans-serif" font-size="11" fill="#8A8F84" text-anchor="middle">Graisses 400 à 800</text>
+
+  <text x="650" y="438" font-family="Inter, Segoe UI, system-ui, sans-serif" font-size="9.5" font-weight="600" letter-spacing="1.5" fill="#8A8F84">DISPLAY — 30 / 700</text>
+  <text x="650" y="478" font-family="Inter, Segoe UI, system-ui, sans-serif" font-size="30" font-weight="700" fill="#111310">Design avec intention</text>
+
+  <text x="650" y="518" font-family="Inter, Segoe UI, system-ui, sans-serif" font-size="9.5" font-weight="600" letter-spacing="1.5" fill="#8A8F84">TITRE — 20 / 600</text>
+  <text x="650" y="548" font-family="Inter, Segoe UI, system-ui, sans-serif" font-size="20" font-weight="600" fill="#111310">Composants réutilisables</text>
+
+  <text x="650" y="592" font-family="Inter, Segoe UI, system-ui, sans-serif" font-size="9.5" font-weight="600" letter-spacing="1.5" fill="#8A8F84">CORPS — 15 / 400</text>
+  <text x="650" y="618" font-family="Inter, Segoe UI, system-ui, sans-serif" font-size="15" fill="#3A3D37">Des bases claires, documentées et accessibles.</text>
+
+  <text x="650" y="650" font-family="Inter, Segoe UI, system-ui, sans-serif" font-size="9.5" font-weight="600" letter-spacing="1.5" fill="#8A8F84">LÉGENDE — 12 / 500</text>
+  <text x="650" y="670" font-family="Inter, Segoe UI, system-ui, sans-serif" font-size="12" fill="#6B6F66">Informations secondaires</text>
+
+  <rect x="1150" y="420" width="398" height="270" rx="14" fill="#FFFFFF" stroke="#E8E6DF"/>
+  <text x="1176" y="456" font-family="Inter, Segoe UI, system-ui, sans-serif" font-size="13" font-weight="600" fill="#111310">Règles d'usage</text>
+  <circle cx="1182" cy="492" r="4" fill="#FF4D00"/>
+  <text x="1198" y="496" font-family="Inter, Segoe UI, system-ui, sans-serif" font-size="12" fill="#6B6F66">Contraste minimum de 4,5:1</text>
+  <circle cx="1182" cy="530" r="4" fill="#FF4D00"/>
+  <text x="1198" y="534" font-family="Inter, Segoe UI, system-ui, sans-serif" font-size="12" fill="#6B6F66">Rayons de 10 px pour les cartes</text>
+  <circle cx="1182" cy="568" r="4" fill="#FF4D00"/>
+  <text x="1198" y="572" font-family="Inter, Segoe UI, system-ui, sans-serif" font-size="12" fill="#6B6F66">Espacements sur une base de 4 px</text>
+  <circle cx="1182" cy="606" r="4" fill="#FF4D00"/>
+  <text x="1198" y="610" font-family="Inter, Segoe UI, system-ui, sans-serif" font-size="12" fill="#6B6F66">Une seule couleur d'accent par vue</text>
+
+  <!-- Composants -->
+  <text x="348" y="742" font-family="Inter, Segoe UI, system-ui, sans-serif" font-size="16" font-weight="700" fill="#111310">Composants</text>
+  <text x="1548" y="742" font-family="Inter, Segoe UI, system-ui, sans-serif" font-size="11" fill="#8A8F84" text-anchor="end">12 éléments</text>
+
+  <rect x="348" y="780" width="150" height="50" rx="10" fill="#FF4D00"/>
+  <text x="423" y="811" font-family="Inter, Segoe UI, system-ui, sans-serif" font-size="14" font-weight="600" fill="#111310" text-anchor="middle">Primaire</text>
+
+  <rect x="514" y="780" width="160" height="50" rx="10" fill="#FFFFFF" stroke="#111310" stroke-width="1.5"/>
+  <text x="594" y="811" font-family="Inter, Segoe UI, system-ui, sans-serif" font-size="14" font-weight="600" fill="#111310" text-anchor="middle">Secondaire</text>
+
+  <rect x="690" y="780" width="330" height="50" rx="10" fill="#FFFFFF" stroke="#E8E6DF"/>
+  <circle cx="718" cy="804" r="7" fill="none" stroke="#8A8F84" stroke-width="2"/>
+  <line x1="723" y1="809" x2="729" y2="815" stroke="#8A8F84" stroke-width="2" stroke-linecap="round"/>
+  <text x="742" y="811" font-family="Inter, Segoe UI, system-ui, sans-serif" font-size="13" fill="#8A8F84">Rechercher un composant</text>
+
+  <rect x="1060" y="790" width="56" height="30" rx="15" fill="#FF4D00"/>
+  <circle cx="1100" cy="805" r="12" fill="#FFFFFF"/>
+  <text x="1132" y="811" font-family="Inter, Segoe UI, system-ui, sans-serif" font-size="13" fill="#111310">Mode sombre</text>
+
+  <rect x="348" y="866" width="94" height="28" rx="14" fill="#FFF0E8"/>
+  <text x="395" y="885" font-family="Inter, Segoe UI, system-ui, sans-serif" font-size="11" font-weight="600" fill="#C43500" text-anchor="middle">Nouveau</text>
+  <rect x="452" y="866" width="74" height="28" rx="14" fill="#FFE3D3"/>
+  <text x="489" y="885" font-family="Inter, Segoe UI, system-ui, sans-serif" font-size="11" font-weight="600" fill="#111310" text-anchor="middle">Bêta</text>
+  <rect x="536" y="866" width="104" height="28" rx="14" fill="#EFEDE6"/>
+  <text x="588" y="885" font-family="Inter, Segoe UI, system-ui, sans-serif" font-size="11" font-weight="600" fill="#6B6F66" text-anchor="middle">Déprécié</text>
+</svg>

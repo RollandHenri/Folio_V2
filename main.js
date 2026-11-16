@@ -1,6 +1,7 @@
 /* =========================================================================
-   1. STOCKAGE DE SESSION SÉCURISÉ (storage.js)
+   Portfolio Main Script
    ========================================================================= */
+
 function safeGet(key) {
   try {
     return sessionStorage.getItem(key);
@@ -12,180 +13,11 @@ function safeGet(key) {
 function safeSet(key, val) {
   try {
     sessionStorage.setItem(key, val);
-  } catch (e) {
-    // Échec silencieux si le stockage est désactivé
-  }
+  } catch (e) {}
 }
 
 /* =========================================================================
-   2. DONNÉES DES PROJETS (projects.js)
-   ========================================================================= */
-const projectsData = {
-  1: {
-    title: {
-      fr: "Atlas — Plateforme e-commerce",
-      en: "Atlas — E-commerce platform",
-    },
-    desc: {
-      fr: "Boutique headless complète : catalogue performant, paiement sécurisé et back-office unifié.",
-      en: "Headless storefront: unified catalogue, checkout and back-office.",
-    },
-    tech: ["React", "Node.js", "Stripe", "PostgreSQL"],
-    link: "https://example.com/atlas",
-    colors: ["#ff4d00", "#c43500", "#ff6b35"],
-    captions: {
-      fr: [
-        "Aperçu de la boutique headless Atlas",
-        "Catalogue et filtres de recherche",
-        "Tunnel de paiement sécurisé",
-      ],
-      en: [
-        "Preview of the Atlas headless store",
-        "Catalogue and search filters",
-        "Secure checkout tunnel",
-      ],
-    },
-    caption: {
-      fr: "Aperçu de la boutique headless Atlas",
-      en: "Preview of the Atlas headless store",
-    },
-  },
-  2: {
-    title: {
-      fr: "Pulse — Tableau de bord temps réel",
-      en: "Pulse — Real-time dashboard",
-    },
-    desc: {
-      fr: "Suivi d'indicateurs live et graphiques analytiques haute performance dédiés aux équipes ops.",
-      en: "Live KPI tracking and high-performance analytics for ops teams.",
-    },
-    tech: ["Vue", "D3.js", "WebSocket", "Redis"],
-    link: "https://example.com/pulse",
-    colors: ["#10b981", "#059669", "#34d399"],
-    captions: {
-      fr: [
-        "Tableau de bord Pulse en temps réel",
-        "Graphiques analytiques en direct",
-        "Vue des alertes ops",
-      ],
-      en: [
-        "The Pulse dashboard in real time",
-        "Live analytics charts",
-        "Ops alerts view",
-      ],
-    },
-    caption: {
-      fr: "Tableau de bord Pulse en temps réel",
-      en: "The Pulse dashboard in real time",
-    },
-  },
-  3: {
-    title: {
-      fr: "Flux — Application collaborative",
-      en: "Flux — Collaborative app",
-    },
-    desc: {
-      fr: "Outil de gestion de projet collaboratif en temps réel conçu pour les équipes distribuées.",
-      en: "Real-time collaborative project management built for distributed teams.",
-    },
-    tech: ["React", "Firebase", "TypeScript", "Tailwind"],
-    link: "https://example.com/flux",
-    colors: ["#3b82f6", "#2563eb", "#60a5fa"],
-    captions: {
-      fr: [
-        "Interface collaborative Flux",
-        "Édition en temps réel",
-        "Vue équipe distribuée",
-      ],
-      en: [
-        "The Flux collaborative interface",
-        "Real-time editing",
-        "Distributed team view",
-      ],
-    },
-    caption: {
-      fr: "Interface collaborative Flux",
-      en: "The Flux collaborative interface",
-    },
-  },
-  4: {
-    title: {
-      fr: "Nebula — Plateforme de streaming",
-      en: "Nebula — Streaming platform",
-    },
-    desc: {
-      fr: "Diffusion vidéo haute définition avec recommandation IA.",
-      en: "High-definition video delivery with AI recommendations.",
-    },
-    tech: ["React", "Node.js", "AWS", "Python"],
-    link: "https://example.com/nebula",
-    colors: ["#a855f7", "#9333ea", "#c084fc"],
-    captions: {
-      fr: [
-        "Lecteur vidéo Nebula",
-        "Catalogue et recommandations",
-        "Lecture haute définition",
-      ],
-      en: [
-        "The Nebula video player",
-        "Catalogue and recommendations",
-        "High-definition playback",
-      ],
-    },
-    caption: { fr: "Lecteur vidéo Nebula", en: "The Nebula video player" },
-  },
-  5: {
-    title: {
-      fr: "Orbit — Outil de productivité",
-      en: "Orbit — Productivity tool",
-    },
-    desc: {
-      fr: "Organisation de tâches et collaboration en équipe simplifiée.",
-      en: "Simplified task management and team collaboration.",
-    },
-    tech: ["Vue", "Nuxt", "Supabase", "JavaScript"],
-    link: "https://example.com/orbit",
-    colors: ["#f59e0b", "#d97706", "#fbbf24"],
-    captions: {
-      fr: [
-        "Tableau de bord Orbit",
-        "Gestion des tâches",
-        "Vue collaboration d'équipe",
-      ],
-      en: ["The Orbit dashboard", "Task management", "Team collaboration view"],
-    },
-    caption: { fr: "Tableau de bord Orbit", en: "The Orbit dashboard" },
-  },
-  6: {
-    title: { fr: "Zen — Application bien-être", en: "Zen — Wellness app" },
-    desc: {
-      fr: "Méditation guidée et suivi du sommeil personnalisé.",
-      en: "Guided meditation and personalised sleep tracking.",
-    },
-    tech: ["React Native", "Expo", "Node.js", "MongoDB"],
-    link: "https://example.com/zen",
-    colors: ["#14b8a6", "#0d9488", "#5eead4"],
-    captions: {
-      fr: [
-        "Interface Zen bien-être",
-        "Sessions de méditation guidée",
-        "Suivi du sommeil",
-      ],
-      en: [
-        "The Zen wellness interface",
-        "Guided meditation sessions",
-        "Sleep tracking",
-      ],
-    },
-    caption: {
-      fr: "Interface Zen bien-être",
-      en: "The Zen wellness interface",
-    },
-  },
-};
-
-/* =========================================================================
-   4. NAVIGATION MOBILE (nav.js)
+   Navigation Mobile
    ========================================================================= */
 function initNav() {
   const toggle = document.querySelector(".nav__toggle");
@@ -220,7 +52,7 @@ function initNav() {
 }
 
 /* =========================================================================
-   5. FOND ANIMÉ : CONSTELLATION (constellation.js)
+   Fond Animé : Constellation
    ========================================================================= */
 function initConstellation() {
   try {
@@ -381,29 +213,16 @@ function initConstellation() {
 }
 
 /* =========================================================================
-   6. ÉCRAN DE DÉVOILEMENT ET INTRO HERO (intro.js)
+   Écran de Dévoilement et Cinématique Bento
    ========================================================================= */
 const ANIMATIONS_DONE_KEY = "folioAnimationsDone";
-
 const HERO_INTRO_CONFIG = {
-  LOADER_PAUSE_BEFORE_INTRO: 500,
-  EJECT_DISTANCE: 900,
-  IMAGE_ZOOM_MAX: 3.5,
-  IMAGE_EJECT_DURATION: 1300,
-  IMAGE_STAGGER_DELAY: 200,
-  H1_ZOOM_START: 0.1,
-  H1_ZOOM_MAX: 18.0,
-  H1_ZOOM_DURATION: 950,
-  BLANK_PAUSE: 150,
-  HERO_APPEAR_DELAY: 300,
-  HERO_FADE_TO_H1_DROP_DELAY: 400,
-  EJECT_ANGLES: [-135, -45, 135, 45, -90, 90],
+  LOADER_PAUSE_BEFORE_INTRO: 800, // Réduit pour enchaîner instantanément
 };
 
 function releaseScrollLock() {
   document.documentElement.classList.remove("is-animating");
   document.body.classList.remove("is-animating");
-  window.scrollTo({ top: 0, behavior: "instant" });
 }
 
 function initIntro({ onDone } = {}) {
@@ -419,26 +238,255 @@ function initIntro({ onDone } = {}) {
     } catch (e) {}
   };
 
+  const bentoController = (() => {
+    const bentoIntro = document.getElementById("bentoIntro");
+    const bentoGrid = document.getElementById("bentoGrid");
+    const scrollIndicator = document.getElementById("scrollIndicator");
+    const centralFrame = document.getElementById("centralFrame");
+
+    let currentProgress = 1;
+    let targetProgress = 1;
+    let isActive = false;
+    let targetScale = 2.6;
+    let rafId = null;
+    const LERP_FACTOR = 0.08;
+    const SCROLL_SENSITIVITY = 0.0009;
+
+    const recalcScale = () => {
+      if (!centralFrame || !bentoGrid) return;
+      const prevTransform = bentoGrid.style.transform;
+      bentoGrid.style.transform = "scale(1)";
+      bentoGrid.style.transformOrigin = "center center";
+
+      const gridRect = bentoGrid.getBoundingClientRect();
+      const frameRect = centralFrame.getBoundingClientRect();
+
+      bentoGrid.style.transform = prevTransform;
+
+      if (
+        gridRect.width > 0 &&
+        gridRect.height > 0 &&
+        frameRect.width > 0 &&
+        frameRect.height > 0
+      ) {
+        const scaleX = window.innerWidth / frameRect.width;
+        const scaleY = window.innerHeight / frameRect.height;
+        targetScale = Math.max(scaleX, scaleY);
+
+        const originX =
+          ((frameRect.left + frameRect.width / 2 - gridRect.left) /
+            gridRect.width) *
+          100;
+        const originY =
+          ((frameRect.top + frameRect.height / 2 - gridRect.top) /
+            gridRect.height) *
+          100;
+        bentoGrid.style.transformOrigin = `${originX}% ${originY}%`;
+      }
+    };
+
+    const populateImages = () => {
+      const cards = document.querySelectorAll(".card");
+      const imgs = document.querySelectorAll(".bento-img");
+      cards.forEach((card, index) => {
+        const cardImg = card.querySelector(".card__img img");
+        if (imgs[index] && cardImg && !imgs[index].src) {
+          imgs[index].src = cardImg.getAttribute("src");
+        }
+      });
+    };
+
+    const render = () => {
+      if (!bentoIntro || !bentoGrid) return;
+
+      currentProgress += (targetProgress - currentProgress) * LERP_FACTOR;
+
+      if (Math.abs(targetProgress - currentProgress) < 0.0001) {
+        currentProgress = targetProgress;
+        if (rafId) {
+          cancelAnimationFrame(rafId);
+          rafId = null;
+        }
+      } else {
+        rafId = requestAnimationFrame(render);
+      }
+
+      if (scrollIndicator) {
+        scrollIndicator.style.opacity = Math.max(0, 1 - currentProgress * 1.5);
+      }
+
+      const zoomProgress = Math.min(currentProgress / 0.82, 1);
+      const easedZoom = Math.pow(zoomProgress, 1.8);
+      const gridScale = 1 + easedZoom * (targetScale - 1);
+
+      // Applique le zoom de la grille bento
+      bentoGrid.style.transform = `scale(${gridScale})`;
+
+      // Dès que le bento atteint 100% de sa course
+      if (currentProgress >= 0.85) {
+        isActive = false;
+        bentoIntro.style.opacity = "0";
+        bentoIntro.style.visibility = "hidden";
+        bentoIntro.style.pointerEvents = "none";
+        bentoIntro.classList.remove("is-visible");
+
+        document.body.classList.remove("is-bento-intro");
+        document.body.classList.add("is-loaded"); // <--- Déclenche le fondu CSS du héro instantanément ici
+        releaseScrollLock();
+      } else {
+        isActive = true;
+        bentoIntro.style.visibility = "visible";
+        bentoIntro.style.pointerEvents = "auto";
+        bentoIntro.classList.add("is-visible");
+
+        if (currentProgress > 0.82) {
+          // Disparition en douceur de la grille bento en fin de zoom
+          const fadeProgress = (currentProgress - 0.82) / 0.18;
+          bentoIntro.style.opacity = String(1 - fadeProgress);
+        } else {
+          bentoIntro.style.opacity = "1";
+          document.body.classList.add("is-bento-intro");
+          document.body.classList.remove("is-loaded");
+        }
+      }
+    };
+
+    const startLoop = () => {
+      if (!rafId) {
+        rafId = requestAnimationFrame(render);
+      }
+    };
+
+    const openAtStart = () => {
+      populateImages();
+      currentProgress = 0;
+      targetProgress = 0;
+      isActive = true;
+      window.scrollTo({ top: 0, behavior: "instant" });
+
+      if (bentoIntro) {
+        bentoIntro.style.visibility = "visible";
+        bentoIntro.style.pointerEvents = "auto";
+        bentoIntro.classList.add("is-visible");
+      }
+
+      recalcScale();
+      startLoop();
+    };
+
+    const finishImmediately = () => {
+      populateImages();
+      currentProgress = 1;
+      targetProgress = 1;
+      isActive = false;
+      render();
+    };
+
+    const onWheel = (e) => {
+      if (!bentoIntro || !bentoGrid) return;
+
+      if (isActive || currentProgress < 1) {
+        e.preventDefault();
+        window.scrollTo({ top: 0, behavior: "instant" });
+
+        targetProgress = Math.min(
+          1,
+          Math.max(0, targetProgress + e.deltaY * SCROLL_SENSITIVITY),
+        );
+        startLoop();
+
+        if (targetProgress >= 1) {
+          notifyDone();
+        }
+        return;
+      }
+
+      if (window.scrollY <= 2 && e.deltaY < 0) {
+        e.preventDefault();
+        populateImages();
+        recalcScale();
+
+        if (targetProgress >= 1) {
+          currentProgress = 0.95;
+          targetProgress = 0.95;
+        }
+
+        targetProgress = Math.max(
+          0,
+          targetProgress + e.deltaY * SCROLL_SENSITIVITY,
+        );
+        startLoop();
+      }
+    };
+
+    let touchStartY = 0;
+    const onTouchStart = (e) => {
+      if (e.touches && e.touches.length > 0) {
+        touchStartY = e.touches[0].clientY;
+      }
+    };
+
+    const onTouchMove = (e) => {
+      if (!e.touches || e.touches.length === 0) return;
+      const currentY = e.touches[0].clientY;
+      const deltaY = touchStartY - currentY;
+      touchStartY = currentY;
+
+      if (isActive || currentProgress < 1) {
+        e.preventDefault();
+        targetProgress = Math.min(
+          1,
+          Math.max(0, targetProgress + deltaY * (SCROLL_SENSITIVITY * 2.5)),
+        );
+        startLoop();
+        if (targetProgress >= 1) {
+          notifyDone();
+        }
+        return;
+      }
+
+      if (window.scrollY <= 2 && deltaY < 0) {
+        e.preventDefault();
+        populateImages();
+        recalcScale();
+        if (targetProgress >= 1) {
+          currentProgress = 0.95;
+          targetProgress = 0.95;
+        }
+        targetProgress = Math.max(
+          0,
+          targetProgress + deltaY * (SCROLL_SENSITIVITY * 2.5),
+        );
+        startLoop();
+      }
+    };
+
+    window.addEventListener("wheel", onWheel, { passive: false });
+    window.addEventListener("touchstart", onTouchStart, { passive: true });
+    window.addEventListener("touchmove", onTouchMove, { passive: false });
+    window.addEventListener("resize", () => {
+      recalcScale();
+      if (isActive) startLoop();
+    });
+
+    return {
+      openAtStart,
+      finishImmediately,
+    };
+  })();
+
   const revealFallback = (error) => {
     if (revealed) return;
     revealed = true;
     clearTimeout(failsafeTimer);
     clearInterval(interval);
-    console.warn(
-      "Séquence d'intro interrompue, site révélé en secours :",
-      error,
-    );
 
     try {
       const unveilScreen = document.getElementById("unveil-screen");
-      const heroIntroOverlay = document.getElementById("hero-intro-overlay");
       if (unveilScreen) unveilScreen.remove();
-      if (heroIntroOverlay) heroIntroOverlay.remove();
-      document.body.classList.add("is-loaded");
-      releaseScrollLock();
+      bentoController.finishImmediately();
+      notifyDone();
     } catch (e) {}
-
-    notifyDone();
   };
 
   const guarded =
@@ -454,21 +502,9 @@ function initIntro({ onDone } = {}) {
   try {
     if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
       const unveilScreen = document.getElementById("unveil-screen");
-      const heroIntroOverlay = document.getElementById("hero-intro-overlay");
       if (unveilScreen) unveilScreen.remove();
-      if (heroIntroOverlay) heroIntroOverlay.remove();
-      document.body.classList.add("is-loaded");
       safeSet(ANIMATIONS_DONE_KEY, "1");
-      releaseScrollLock();
-
-      document.querySelectorAll(".hero-fade-item").forEach((item) => {
-        item.classList.add("is-visible");
-      });
-      const heroTitle = document.getElementById("hero-title");
-      if (heroTitle) {
-        heroTitle.classList.remove("is-hidden-initial");
-      }
-
+      bentoController.finishImmediately();
       notifyDone();
       return;
     }
@@ -476,20 +512,8 @@ function initIntro({ onDone } = {}) {
     const animationsAlreadyDone = safeGet(ANIMATIONS_DONE_KEY) === "1";
     if (animationsAlreadyDone) {
       const unveilScreen = document.getElementById("unveil-screen");
-      const heroIntroOverlay = document.getElementById("hero-intro-overlay");
       if (unveilScreen) unveilScreen.remove();
-      if (heroIntroOverlay) heroIntroOverlay.remove();
-      document.body.classList.add("is-loaded");
-      releaseScrollLock();
-
-      document.querySelectorAll(".hero-fade-item").forEach((item) => {
-        item.classList.add("is-visible");
-      });
-      const heroTitle = document.getElementById("hero-title");
-      if (heroTitle) {
-        heroTitle.classList.remove("is-hidden-initial");
-      }
-
+      bentoController.finishImmediately();
       notifyDone();
       return;
     }
@@ -502,7 +526,6 @@ function initIntro({ onDone } = {}) {
     const unveilScreen = document.getElementById("unveil-screen");
     const unveilCounter = document.getElementById("unveil-counter");
     const unveilFill = document.getElementById("unveil-fill");
-    const heroIntroOverlay = document.getElementById("hero-intro-overlay");
 
     let progress = 0;
 
@@ -532,22 +555,21 @@ function initIntro({ onDone } = {}) {
       if (revealed) return;
       revealed = true;
       clearTimeout(failsafeTimer);
-      if (unveilScreen) unveilScreen.remove();
-      if (heroIntroOverlay) heroIntroOverlay.remove();
-      document.body.classList.add("is-loaded");
-      releaseScrollLock();
-      safeSet(ANIMATIONS_DONE_KEY, "1");
 
-      document.querySelectorAll(".hero-fade-item").forEach((item) => {
-        item.classList.add("is-visible");
-      });
+      if (unveilScreen) {
+        unveilScreen.classList.add("is-fading");
 
-      const heroTitle = document.getElementById("hero-title");
-      if (heroTitle) {
-        heroTitle.classList.remove("is-hidden-initial");
+        // Déclenchement instantané du bento dès que le loader commence son fondu
+        bentoController.openAtStart();
+
+        setTimeout(() => {
+          if (unveilScreen) unveilScreen.remove();
+          safeSet(ANIMATIONS_DONE_KEY, "1");
+        }, 500);
+        return;
       }
 
-      notifyDone();
+      bentoController.openAtStart();
     };
   } catch (error) {
     revealFallback(error);
@@ -555,14 +577,13 @@ function initIntro({ onDone } = {}) {
 }
 
 /* =========================================================================
-   7. INITIALISATION PRINCIPALE DE LA PAGE
+   Initialisation Principale de la Page
    ========================================================================= */
 document.addEventListener("DOMContentLoaded", () => {
   window.scrollTo({ top: 0, behavior: "instant" });
 
   initIntro();
 
-  // --- Gestion des cartes Projets & Animation FLIP Modal ---
   const cardGrid = document.getElementById("cardGrid");
   const cards = document.querySelectorAll(".card");
   const modalOverlay = document.getElementById("modalOverlay");
@@ -605,15 +626,23 @@ document.addEventListener("DOMContentLoaded", () => {
 
       cardGrid.classList.add("no-hover");
 
-      // FIRST
       const firstRect = card.getBoundingClientRect();
 
       if (dataNode) {
         modalTitle.textContent = dataNode.dataset.title || "";
-        const cardImg = card.querySelector('.card__img');
-        const bgColor = cardImg ? getComputedStyle(cardImg).backgroundColor : '';
-        modalImage.style.backgroundImage = '';
-        modalImage.style.backgroundColor = bgColor;
+        const cardImg = card.querySelector(".card__img");
+        const cardImgEl = cardImg ? cardImg.querySelector("img") : null;
+        const imgSrc = cardImgEl ? cardImgEl.currentSrc || cardImgEl.src : "";
+
+        if (imgSrc) {
+          modalImage.style.backgroundImage = `url("${imgSrc}")`;
+          modalImage.style.backgroundColor = "";
+        } else {
+          modalImage.style.backgroundImage = "";
+          modalImage.style.backgroundColor = cardImg
+            ? getComputedStyle(cardImg).backgroundColor
+            : "";
+        }
         modalDescription.textContent = dataNode.dataset.description || "";
         btnVisit.href = dataNode.dataset.url || "#";
 
@@ -629,8 +658,9 @@ document.addEventListener("DOMContentLoaded", () => {
         });
       }
 
-      // LAST
-      const wrapperRect = document.querySelector('.projects-wrapper').getBoundingClientRect();
+      const wrapperRect = document
+        .querySelector(".projects-wrapper")
+        .getBoundingClientRect();
       const targetWidth = Math.min(wrapperRect.width * 0.85, 900);
       const targetHeight = targetWidth * 0.9;
       const targetTop = Math.max(20, (wrapperRect.height - targetHeight) / 2);
@@ -639,7 +669,6 @@ document.addEventListener("DOMContentLoaded", () => {
       expandedCard.style.width = `${targetWidth}px`;
       expandedCard.style.height = `${targetHeight}px`;
 
-      // INVERT : positionner la carte déployée sur la carte cliquée (coordonnées relatives au wrapper)
       const cardXInWrapper = firstRect.left - wrapperRect.left;
       const cardYInWrapper = firstRect.top - wrapperRect.top;
       const scaleX = firstRect.width / targetWidth;
@@ -648,6 +677,17 @@ document.addEventListener("DOMContentLoaded", () => {
       const translateY = cardYInWrapper - targetTop;
 
       flipState = { translateX, translateY, scaleX, scaleY };
+
+      // Rendre le modal et son contenu visibles AVANT l'animation,
+      // surtout à la toute première ouverture (sinon le modal reste blanc pendant le déploiement)
+      expandedCard.style.opacity = "1";
+      expandedCard.style.visibility = "visible";
+
+      const expandedContent = expandedCard.querySelector(".expanded-content");
+      if (expandedContent) {
+        expandedContent.style.opacity = "1";
+        expandedContent.style.transition = "none";
+      }
 
       expandedCard.style.transition = "none";
       expandedCard.style.transform = `translate3d(${translateX}px, ${translateY}px, 0) scale(${scaleX}, ${scaleY})`;
@@ -658,12 +698,19 @@ document.addEventListener("DOMContentLoaded", () => {
       card.classList.add("ghost");
       modalOverlay.classList.add("active");
       expandedCard.classList.add("active");
-      expandedCard.style.opacity = "1";
-      expandedCard.style.visibility = "visible";
 
       expandedCard.offsetHeight;
 
-      // Fermeture en cliquant n'importe où en dehors de la carte
+      // Restaure la transition fluide sur le contenu pour l'animation qui suit
+      if (expandedContent) {
+        expandedContent.style.transition = "";
+      }
+
+      expandedCard.style.transition =
+        "transform 1.2s cubic-bezier(0.16, 1, 0.3, 1), border-radius 1.2s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.3s ease";
+      expandedCard.style.transform = "translate3d(0, 0, 0) scale(1, 1)";
+      expandedCard.style.borderRadius = "16px";
+
       handleDocClick = (e) => {
         if (!expandedCard.contains(e.target)) {
           closeModal();
@@ -671,7 +718,6 @@ document.addEventListener("DOMContentLoaded", () => {
       };
       document.addEventListener("click", handleDocClick);
 
-      // PLAY
       expandedCard.style.transition =
         "transform 1.2s cubic-bezier(0.16, 1, 0.3, 1), border-radius 1.2s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.3s ease";
       expandedCard.style.transform = "translate3d(0, 0, 0) scale(1, 1)";
@@ -737,17 +783,14 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // --- Mettre à jour l'année du footer ---
   const yearEl = document.getElementById("footer-year");
   if (yearEl) {
     yearEl.textContent = new Date().getFullYear().toString();
   }
 
-  // --- Initialisation des modules ---
   initNav();
   initConstellation();
 
-  // --- Sélecteur de langue : indicateur visuel uniquement ---
   const langBtns = document.querySelectorAll(".lang-btn");
   langBtns.forEach((btn) => {
     btn.addEventListener("click", () => {

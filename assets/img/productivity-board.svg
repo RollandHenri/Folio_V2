@@ -1,0 +1,148 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" width="1600" height="1000" role="img" aria-label="Aperçu d'un gestionnaire de tâches collaboratif en kanban">
+  <rect width="1600" height="1000" fill="#FAFAF7"/>
+
+  <!-- Top bar -->
+  <rect x="0" y="0" width="1600" height="88" fill="#FFFFFF"/>
+  <line x1="0" y1="88" x2="1600" y2="88" stroke="#E8E6DF"/>
+  <rect x="32" y="28" width="32" height="32" rx="8" fill="#FF4D00"/>
+  <text x="48" y="50" font-family="Inter, Segoe UI, system-ui, sans-serif" font-size="16" font-weight="800" fill="#FFFFFF" text-anchor="middle">F</text>
+  <text x="76" y="52" font-family="Inter, Segoe UI, system-ui, sans-serif" font-size="18" font-weight="800" letter-spacing="3" fill="#111310">FLOW</text>
+
+  <g font-family="Inter, Segoe UI, system-ui, sans-serif" font-size="13" fill="#8A8F84">
+    <text x="420" y="53" font-weight="600" fill="#111310">Tableau</text>
+    <text x="516" y="53">Liste</text>
+    <text x="592" y="53">Calendrier</text>
+  </g>
+  <rect x="420" y="76" width="64" height="3" rx="2" fill="#FF4D00"/>
+
+  <circle cx="1294" cy="44" r="14" fill="#FFA95D" stroke="#FFFFFF" stroke-width="3"/>
+  <circle cx="1324" cy="44" r="14" fill="#FFD3B8" stroke="#FFFFFF" stroke-width="3"/>
+  <circle cx="1354" cy="44" r="14" fill="#E8E6DF" stroke="#FFFFFF" stroke-width="3"/>
+  <text x="1354" y="49" font-family="Inter, Segoe UI, system-ui, sans-serif" font-size="10" font-weight="700" fill="#6B6F66" text-anchor="middle">+3</text>
+
+  <rect x="1392" y="26" width="156" height="36" rx="18" fill="#FF4D00"/>
+  <text x="1470" y="49" font-family="Inter, Segoe UI, system-ui, sans-serif" font-size="12" font-weight="600" fill="#111310" text-anchor="middle">+ Nouvelle tâche</text>
+
+  <!-- Board header -->
+  <text x="56" y="152" font-family="Inter, Segoe UI, system-ui, sans-serif" font-size="28" font-weight="700" fill="#111310">Sprint 14</text>
+  <text x="56" y="178" font-family="Inter, Segoe UI, system-ui, sans-serif" font-size="12" fill="#6B6F66">11 tâches · échéance vendredi 21 novembre</text>
+
+  <rect x="1240" y="138" width="70" height="32" rx="16" fill="#111310"/>
+  <text x="1275" y="159" font-family="Inter, Segoe UI, system-ui, sans-serif" font-size="11" font-weight="600" fill="#FFFFFF" text-anchor="middle">Tous</text>
+  <rect x="1322" y="138" width="92" height="32" rx="16" fill="#FFFFFF" stroke="#E8E6DF"/>
+  <text x="1368" y="159" font-family="Inter, Segoe UI, system-ui, sans-serif" font-size="11" fill="#6B6F66" text-anchor="middle">Design</text>
+  <rect x="1426" y="138" width="72" height="32" rx="16" fill="#FFFFFF" stroke="#E8E6DF"/>
+  <text x="1462" y="159" font-family="Inter, Segoe UI, system-ui, sans-serif" font-size="11" fill="#6B6F66" text-anchor="middle">Dev</text>
+
+  <!-- Colonne 1 -->
+  <rect x="56" y="212" width="480" height="728" rx="16" fill="#F1EFE9"/>
+  <circle cx="84" cy="246" r="6" fill="#FF4D00"/>
+  <text x="100" y="251" font-family="Inter, Segoe UI, system-ui, sans-serif" font-size="14" font-weight="600" fill="#111310">À faire</text>
+  <rect x="484" y="234" width="34" height="24" rx="12" fill="#E4E1D8"/>
+  <text x="501" y="250" font-family="Inter, Segoe UI, system-ui, sans-serif" font-size="11" font-weight="600" fill="#6B6F66" text-anchor="middle">4</text>
+
+  <rect x="68" y="276" width="456" height="140" rx="12" fill="#FFFFFF" stroke="#E8E6DF"/>
+  <rect x="84" y="294" width="76" height="22" rx="11" fill="#FFF0E8"/>
+  <text x="122" y="309" font-family="Inter, Segoe UI, system-ui, sans-serif" font-size="9.5" font-weight="600" fill="#C43500" text-anchor="middle">Design</text>
+  <text x="84" y="338" font-family="Inter, Segoe UI, system-ui, sans-serif" font-size="13" font-weight="600" fill="#111310">Refonte de la page d'accueil</text>
+  <text x="84" y="372" font-family="Inter, Segoe UI, system-ui, sans-serif" font-size="10" fill="#8A8F84">18 nov. · 3 commentaires</text>
+  <circle cx="492" cy="380" r="12" fill="#FFA95D"/>
+
+  <rect x="68" y="432" width="456" height="140" rx="12" fill="#FFFFFF" stroke="#E8E6DF"/>
+  <rect x="84" y="450" width="58" height="22" rx="11" fill="#EFEDE6"/>
+  <text x="113" y="465" font-family="Inter, Segoe UI, system-ui, sans-serif" font-size="9.5" font-weight="600" fill="#6B6F66" text-anchor="middle">Dev</text>
+  <text x="84" y="494" font-family="Inter, Segoe UI, system-ui, sans-serif" font-size="13" font-weight="600" fill="#111310">Intégrer le nouveau header</text>
+  <text x="84" y="528" font-family="Inter, Segoe UI, system-ui, sans-serif" font-size="10" fill="#8A8F84">19 nov.</text>
+  <circle cx="492" cy="536" r="12" fill="#FFD3B8"/>
+
+  <rect x="68" y="588" width="456" height="140" rx="12" fill="#FFFFFF" stroke="#E8E6DF"/>
+  <rect x="84" y="606" width="76" height="22" rx="11" fill="#FFF0E8"/>
+  <text x="122" y="621" font-family="Inter, Segoe UI, system-ui, sans-serif" font-size="9.5" font-weight="600" fill="#C43500" text-anchor="middle">Design</text>
+  <text x="84" y="650" font-family="Inter, Segoe UI, system-ui, sans-serif" font-size="13" font-weight="600" fill="#111310">Tester les contrastes AA</text>
+  <text x="84" y="684" font-family="Inter, Segoe UI, system-ui, sans-serif" font-size="10" fill="#8A8F84">20 nov.</text>
+  <circle cx="492" cy="692" r="12" fill="#E8E6DF"/>
+
+  <rect x="68" y="744" width="456" height="140" rx="12" fill="#FFFFFF" stroke="#E8E6DF"/>
+  <rect x="84" y="762" width="82" height="22" rx="11" fill="#F4F3EE"/>
+  <text x="125" y="777" font-family="Inter, Segoe UI, system-ui, sans-serif" font-size="9.5" font-weight="600" fill="#6B6F66" text-anchor="middle">Contenu</text>
+  <text x="84" y="806" font-family="Inter, Segoe UI, system-ui, sans-serif" font-size="13" font-weight="600" fill="#111310">Rédiger les micro-copies</text>
+  <text x="84" y="840" font-family="Inter, Segoe UI, system-ui, sans-serif" font-size="10" fill="#8A8F84">21 nov.</text>
+  <circle cx="492" cy="848" r="12" fill="#FFA95D"/>
+
+  <rect x="68" y="900" width="456" height="36" rx="10" fill="none" stroke="#D8D5CB" stroke-dasharray="6 6"/>
+  <text x="296" y="923" font-family="Inter, Segoe UI, system-ui, sans-serif" font-size="11" fill="#8A8F84" text-anchor="middle">+ Ajouter une carte</text>
+
+  <!-- Colonne 2 -->
+  <rect x="560" y="212" width="480" height="728" rx="16" fill="#F1EFE9"/>
+  <circle cx="588" cy="246" r="6" fill="#FFA95D"/>
+  <text x="604" y="251" font-family="Inter, Segoe UI, system-ui, sans-serif" font-size="14" font-weight="600" fill="#111310">En cours</text>
+  <rect x="988" y="234" width="34" height="24" rx="12" fill="#E4E1D8"/>
+  <text x="1005" y="250" font-family="Inter, Segoe UI, system-ui, sans-serif" font-size="11" font-weight="600" fill="#6B6F66" text-anchor="middle">3</text>
+
+  <rect x="572" y="276" width="456" height="140" rx="12" fill="#FFFFFF" stroke="#E8E6DF"/>
+  <rect x="572" y="276" width="4" height="140" rx="2" fill="#FF4D00"/>
+  <rect x="588" y="294" width="58" height="22" rx="11" fill="#EFEDE6"/>
+  <text x="617" y="309" font-family="Inter, Segoe UI, system-ui, sans-serif" font-size="9.5" font-weight="600" fill="#6B6F66" text-anchor="middle">Dev</text>
+  <text x="588" y="338" font-family="Inter, Segoe UI, system-ui, sans-serif" font-size="13" font-weight="600" fill="#111310">API de recherche sémantique</text>
+  <text x="588" y="372" font-family="Inter, Segoe UI, system-ui, sans-serif" font-size="10" fill="#8A8F84">Aujourd'hui · 2 commentaires</text>
+  <circle cx="996" cy="380" r="12" fill="#FFD3B8"/>
+
+  <rect x="572" y="432" width="456" height="140" rx="12" fill="#FFFFFF" stroke="#E8E6DF"/>
+  <rect x="588" y="450" width="76" height="22" rx="11" fill="#FFF0E8"/>
+  <text x="626" y="465" font-family="Inter, Segoe UI, system-ui, sans-serif" font-size="9.5" font-weight="600" fill="#C43500" text-anchor="middle">Design</text>
+  <text x="588" y="494" font-family="Inter, Segoe UI, system-ui, sans-serif" font-size="13" font-weight="600" fill="#111310">Maquettes de la modale projet</text>
+  <text x="588" y="528" font-family="Inter, Segoe UI, system-ui, sans-serif" font-size="10" fill="#8A8F84">17 nov.</text>
+  <circle cx="996" cy="536" r="12" fill="#FFA95D"/>
+
+  <rect x="572" y="588" width="456" height="140" rx="12" fill="#FFFFFF" stroke="#E8E6DF"/>
+  <rect x="588" y="606" width="58" height="22" rx="11" fill="#EFEDE6"/>
+  <text x="617" y="621" font-family="Inter, Segoe UI, system-ui, sans-serif" font-size="9.5" font-weight="600" fill="#6B6F66" text-anchor="middle">Dev</text>
+  <text x="588" y="650" font-family="Inter, Segoe UI, system-ui, sans-serif" font-size="13" font-weight="600" fill="#111310">Optimiser le lazy loading</text>
+  <text x="588" y="684" font-family="Inter, Segoe UI, system-ui, sans-serif" font-size="10" fill="#8A8F84">18 nov.</text>
+  <circle cx="996" cy="692" r="12" fill="#E8E6DF"/>
+
+  <rect x="572" y="900" width="456" height="36" rx="10" fill="none" stroke="#D8D5CB" stroke-dasharray="6 6"/>
+  <text x="800" y="923" font-family="Inter, Segoe UI, system-ui, sans-serif" font-size="11" fill="#8A8F84" text-anchor="middle">+ Ajouter une carte</text>
+
+  <!-- Colonne 3 -->
+  <rect x="1064" y="212" width="480" height="728" rx="16" fill="#F1EFE9"/>
+  <circle cx="1092" cy="246" r="6" fill="#111310"/>
+  <text x="1108" y="251" font-family="Inter, Segoe UI, system-ui, sans-serif" font-size="14" font-weight="600" fill="#111310">Terminé</text>
+  <rect x="1492" y="234" width="34" height="24" rx="12" fill="#E4E1D8"/>
+  <text x="1509" y="250" font-family="Inter, Segoe UI, system-ui, sans-serif" font-size="11" font-weight="600" fill="#6B6F66" text-anchor="middle">4</text>
+
+  <rect x="1076" y="276" width="456" height="140" rx="12" fill="#FFFFFF" stroke="#E8E6DF"/>
+  <rect x="1092" y="294" width="76" height="22" rx="11" fill="#FFF0E8"/>
+  <text x="1130" y="309" font-family="Inter, Segoe UI, system-ui, sans-serif" font-size="9.5" font-weight="600" fill="#C43500" text-anchor="middle">Design</text>
+  <text x="1092" y="338" font-family="Inter, Segoe UI, system-ui, sans-serif" font-size="13" font-weight="600" fill="#6B6F66">Grille bento de l'intro</text>
+  <text x="1092" y="372" font-family="Inter, Segoe UI, system-ui, sans-serif" font-size="10" fill="#8A8F84">14 nov.</text>
+  <circle cx="1500" cy="380" r="12" fill="#FFA95D"/>
+  <path d="M1488 380 l5 5 l9 -10" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <rect x="1076" y="432" width="456" height="140" rx="12" fill="#FFFFFF" stroke="#E8E6DF"/>
+  <rect x="1092" y="450" width="58" height="22" rx="11" fill="#EFEDE6"/>
+  <text x="1121" y="465" font-family="Inter, Segoe UI, system-ui, sans-serif" font-size="9.5" font-weight="600" fill="#6B6F66" text-anchor="middle">Dev</text>
+  <text x="1092" y="494" font-family="Inter, Segoe UI, system-ui, sans-serif" font-size="13" font-weight="600" fill="#6B6F66">Palette et tokens CSS</text>
+  <text x="1092" y="528" font-family="Inter, Segoe UI, system-ui, sans-serif" font-size="10" fill="#8A8F84">12 nov.</text>
+  <circle cx="1500" cy="536" r="12" fill="#FFD3B8"/>
+  <path d="M1488 536 l5 5 l9 -10" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <rect x="1076" y="588" width="456" height="140" rx="12" fill="#FFFFFF" stroke="#E8E6DF"/>
+  <rect x="1092" y="606" width="58" height="22" rx="11" fill="#EFEDE6"/>
+  <text x="1121" y="621" font-family="Inter, Segoe UI, system-ui, sans-serif" font-size="9.5" font-weight="600" fill="#6B6F66" text-anchor="middle">Dev</text>
+  <text x="1092" y="650" font-family="Inter, Segoe UI, system-ui, sans-serif" font-size="13" font-weight="600" fill="#6B6F66">Navigation mobile</text>
+  <text x="1092" y="684" font-family="Inter, Segoe UI, system-ui, sans-serif" font-size="10" fill="#8A8F84">10 nov.</text>
+  <circle cx="1500" cy="692" r="12" fill="#E8E6DF"/>
+  <path d="M1488 692 l5 5 l9 -10" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <rect x="1076" y="744" width="456" height="140" rx="12" fill="#FFFFFF" stroke="#E8E6DF"/>
+  <rect x="1092" y="762" width="76" height="22" rx="11" fill="#FFF0E8"/>
+  <text x="1130" y="777" font-family="Inter, Segoe UI, system-ui, sans-serif" font-size="9.5" font-weight="600" fill="#C43500" text-anchor="middle">Design</text>
+  <text x="1092" y="806" font-family="Inter, Segoe UI, system-ui, sans-serif" font-size="13" font-weight="600" fill="#6B6F66">Loader et transitions</text>
+  <text x="1092" y="840" font-family="Inter, Segoe UI, system-ui, sans-serif" font-size="10" fill="#8A8F84">8 nov.</text>
+  <circle cx="1500" cy="848" r="12" fill="#FFA95D"/>
+  <path d="M1488 848 l5 5 l9 -10" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <rect x="1076" y="900" width="456" height="36" rx="10" fill="none" stroke="#D8D5CB" stroke-dasharray="6 6"/>
+  <text x="1304" y="923" font-family="Inter, Segoe UI, system-ui, sans-serif" font-size="11" fill="#8A8F84" text-anchor="middle">+ Ajouter une carte</text>
+</svg>
